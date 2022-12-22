@@ -1,0 +1,67 @@
+0140313888
+
+                        <li><a href="membre.php">Membres</a></li>
+                        <li><a href="ajout_membre.php">Ajouter un membre</a></li>
+                        <li><a href="client.php">Clients</a></li>
+                        <li><a href="ajout_clients.php">Ajouter un client</a></li>
+                        <li><a href="ajout_produit.php">Ajouter un nouveau produit</a></li>
+                        <li><a href="logout.php">Deconnexion</a></li>
+
+                    </ul>
+
+----------------------------------------------CONTACT PHP------------------------------------------------------------------------------
+
+<?php
+require(__DIR__ . '/vendor/autoload.php');
+
+use \Mailjet\Resources;
+
+define('API_USER', '66e48d2e40d1de38b439ecc438573c63');
+define('API_LOGIN', 'ed322234848d403e67cbf4313067dea6');
+$mj = new \Mailjet\Client(API_USER, API_LOGIN, true, ['version' => 'v3.1']);
+
+if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) && !empty($_POST['message'])) {
+    $nom = htmlspecialchars($_POST['nom']);
+    $prenom = htmlspecialchars($_POST['prenom']);
+    $email = htmlspecialchars($_POST['email']);
+    $message = htmlspecialchars($_POST['message']);
+
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $body = [
+            'Messages' => [
+                [
+                    'From' => [
+                        'Email' => "shaymae.ourahou@yahoo.com",
+                        'Name' => "NoSignal"
+                    ],
+                    'To' => [
+                        [
+                            'Email' => "shaymae.ourahou@yahoo.com",
+                            'Name' => "NoSignal"
+                        ]
+                    ],
+                    'Subject' => "Demande de rensiegnement",
+                    'TextPart' => "$email, $message",
+
+                ]
+            ]
+        ];
+        $response = $mj->post(Resources::$Email, ['body' => $body]);
+        $response->success();
+        echo '<div class="alert alert-success" align="center" style=" text-align: center;">
+            <strong> Super </strong> Email envoyé avec succés !
+          </div>';
+    } else {
+        echo '<div class="alert alert-danger" align="center" style=" text-align: center;">
+            <strong> Erreur </strong> Email non valide
+          </div>';
+    }
+} else {
+    echo '<div class="alert alert-danger" align="center" style=" text-align: center;">
+            <strong> Erreur </strong> Veuillez saisir tous les champs
+          </div>';
+    die();
+}
+?>
+                
+                      

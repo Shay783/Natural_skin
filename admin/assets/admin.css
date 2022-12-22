@@ -1,0 +1,11 @@
+.form_connect{
+    color: white;
+    padding: 50px 50px 50px 50px;
+    background-color:#3d2735 ;
+    border-radius: 30px;
+    -webkit-box-shadow: 2px 4px 34px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 4px 34px 3px rgba(0,0,0,0.75);
+    box-shadow: 2px 4px 34px 3px rgba(0,0,0,0.75);
+}
+
+
