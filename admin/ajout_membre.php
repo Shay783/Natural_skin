@@ -11,7 +11,7 @@ if (isset($_POST['envoi'])) {
 
         $insertUser = $bdd->prepare('INSERT INTO membre_admin(prenom, nom, password,email)VALUES(?, ?, ?, ?)');
         $insertUser->execute(array($prenom, $nom, $password, $email));
-        $recupUser = $bdd->prepare('SELECT * FROM membre_admin WHERE  AND prenom = ? nom = ? AND password = ? AND email = ? ');
+        $recupUser = $bdd->prepare('SELECT * FROM membre_admin WHERE  AND prenom = ? AND nom = ? AND password = ? AND email = ? ');
         $recupUser->execute(array($prenom, $nom, $password,  $email));
         if ($recupUser->rowCount() > 0) {
             $_SESSION['prenom'] = $prenom;
@@ -49,7 +49,7 @@ if (isset($_POST['envoi'])) {
 <body style="background-color: #2e1e26">
 
 
-    <form method="POST" action="" class="form_connect row col-4" style="margin-left:35%; margin-top:10%; margin-bottom:50px; ">
+    <form method="POST" action="" class="form_connect row col-8" style="margin-left:15%; margin-top:10%; margin-bottom:50px; ">
 
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Prénom</label>
@@ -69,7 +69,7 @@ if (isset($_POST['envoi'])) {
             <input type="password" class="form-control" id="exampleInputPassword1" name="password">
         </div>
 
-        <button type="submit" class="btn btn-primary" name="envoi" style="width:20%; margin-left:35%;">Connexion</button>
+        <button type="submit" class="btn btn-primary" name="envoi" style="width:20%; margin-left:35%;">Ajouter</button>
     </form>
 
 

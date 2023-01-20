@@ -1,4 +1,57 @@
+<?php
+require(__DIR__ . '/vendor/autoload.php');
 
+use Mailjet\Client;
+use Mailjet\Resources;
+
+define('API_USER', '66e48d2e40d1de38b439ecc438573c63');
+define('API_LOGIN', 'ed322234848d403e67cbf4313067dea6');
+$mj = new Client(API_USER, API_LOGIN, true, ['version' => 'v3.1']);
+
+$bdd = new PDO('mysql:host=localhost; dbname=natural_skin', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_WARNING, PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
+
+if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) && !empty($_POST['message'])) {
+    $nom = htmlspecialchars($_POST['nom']);
+    $prenom = htmlspecialchars($_POST['prenom']);
+    $email = htmlspecialchars($_POST['email']);
+    $message = htmlspecialchars($_POST['message']);
+
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $body = [
+            'Messages' => [
+                [
+                    'From' => [
+                        'Email' => "shaymae.ourahou@yahoo.com",
+                        'Name' => "shayy"
+                    ],
+                    'To' => [
+                        [
+                            'Email' => "shaymae.ourahou@outlook.com",
+                            'Name' => "shay"
+                        ]
+                    ],
+                    'Subject' => "Demande de renseignement",
+                    'TextPart' => "$email, $message",
+                ]
+            ]
+        ];
+        $response = $mj->post(Resources::$Email, ['body' => $body]);
+        $response->success();
+        echo '<div class="alert alert-success" align="center" style=" text-align: center;">
+            <strong> Super </strong> Email envoyé avec succés !
+          </div>';
+    } else {
+        echo '<div class="alert alert-danger" align="center" style=" text-align: center;">
+            <strong> Erreur </strong> Email non valide
+          </div>';
+    }
+} 
+?>
+
+<?php
+session_start();
+// echo $_SESSION['id'];
+?>
 
 
 <!DOCTYPE html>

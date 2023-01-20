@@ -50,7 +50,7 @@ if (isset($_POST['envoi'])) {
 <body style="background-color: #2e1e26">
 
 
-    <form method="POST" action="" class="form_connect row col-4" style="margin-left:35%; margin-top:10%; margin-bottom:50px; ">
+    <form method="POST" action="" class="form_connect row col-8" style="margin-left:15%; margin-top:10%; margin-bottom:50px; ">
 
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nom</label>

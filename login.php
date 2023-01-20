@@ -42,7 +42,7 @@ if (isset($_POST['envoi'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Catamaran&family=Jura:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="asset/style.css">
+    <link rel="stylesheet" href="asset/connexion.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
@@ -53,48 +53,53 @@ if (isset($_POST['envoi'])) {
 
     <header>
         <div class="ligne">
-            <p>FRAIS DE PORT COLISSIMO 6.90 €</p>
+            <marquee behavior="scroll" direction="left">
+                <span><i class="fa-solid fa-heart"></i> FRAIS DE PORT OFFERT A PARTIR DE 50€ •</span>
+                <span>FRAIS DE PORT OFFERT A PARTIR DE 50€ • </span>
+                <span>FRAIS DE PORT OFFERT A PARTIR DE 50€ • </span>
+                <span>FRAIS DE PORT OFFERT A PARTIR DE 50€ • </span>
+                <span>FRAIS DE PORT OFFERT A PARTIR DE 50€ • </span>
+                <span>FRAIS DE PORT OFFERT A PARTIR DE 50€ • </span>
+                <span>FRAIS DE PORT OFFERT A PARTIR DE 50€ • </span>
+                <span>FRAIS DE PORT OFFERT A PARTIR DE 50€ • </span>
+                <span>FRAIS DE PORT OFFERT A PARTIR DE 50€ • </span>
+                <span>FRAIS DE PORT OFFERT A PARTIR DE 50€ • </span>
+                <span>FRAIS DE PORT OFFERT A PARTIR DE 50€ <i class="fa-solid fa-heart"></i> • </span>
+            </marquee>
         </div>
     </header>
 
-    <div class="section">
-        <div class="row">
-            <div class="col-md-8">
-                <div class=" card" style="text-align:center; ">
-                    <div class="card-header">
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <form method="POST" action="" class="login">
+
+
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="email" name="email" class="login__input" placeholder="Email">
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" name="password" class="login__input" placeholder="Password">
+                    </div>
+                    <button class="button login__submit" type="submit" value="Connexion" name="envoi">
                         Connexion
-                    </div>
-                    <div class=" card-body">
-                        <form method="POST" action="">
-                            <div>
-                                <label for="">Adresse Email</label>
-                                <input type="email" name="email">
-                            </div>
-                            <div style="margin-top:50px;">
-                                <label for="">Mot de passe</label>
-                                <input type="password" name="password">
-                            </div>
-                            <input type="submit" value="Connexion" name="envoi">
-                        </form>
-                        <p>Vous n'avez pas de compte <a href="register.php">Inscrivez vous</a></p>
-                    </div>
-                </div>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>
+                </form>
+                 <p>Vous n'avez pas de compte <a href="register.php">Inscrivez vous</a></p>
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
             </div>
         </div>
     </div>
 
 
-
-    <footer id="footer">
-        <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong><span>Shaymae</span></strong>. All Rights Reserved
-            </div>
-            <div class="credits">
-                Designed by <a href="file:///C:/Users/EDW/index.html">Shaymae Ourahou</a>
-            </div>
-        </div>
-    </footer>
 
 </body>
 

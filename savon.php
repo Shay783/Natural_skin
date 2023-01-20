@@ -24,154 +24,177 @@
 
 
 <body>
-  <header>
-    <div class="ligne">
-      <marquee behavior="scroll" direction="left">
-        <span><i class="fa-solid fa-heart"></i> FRAIS DE PORT OFFERT A PARTIR DE 50€ •</span>
-        <span>FRAIS DE PORT OFFERT A PARTIR DE 50€ • </span>
-        <span>FRAIS DE PORT OFFERT A PARTIR DE 50€ • </span>
-        <span>FRAIS DE PORT OFFERT A PARTIR DE 50€ • </span>
-        <span>FRAIS DE PORT OFFERT A PARTIR DE 50€ • </span>
-        <span>FRAIS DE PORT OFFERT A PARTIR DE 50€ • </span>
-        <span>FRAIS DE PORT OFFERT A PARTIR DE 50€ • </span>
-        <span>FRAIS DE PORT OFFERT A PARTIR DE 50€ • </span>
-        <span>FRAIS DE PORT OFFERT A PARTIR DE 50€ • </span>
-        <span>FRAIS DE PORT OFFERT A PARTIR DE 50€ • </span>
-        <span>FRAIS DE PORT OFFERT A PARTIR DE 50€ <i class="fa-solid fa-heart"></i> • </span>
-      </marquee>
-    </div>
+  <?php
+  include 'nav.php'
+  ?>
 
-    <nav role="navigation">
-      <div id="menuToggle">
+  <section id="savon">
 
-        
+    <div class="savon">
+      <div class="row" style="padding-bottom:50px;">
 
 
-        <span></span>
-        <span></span>
-        <span></span>
 
-        <li><a href="savon.php"><img src="img/beauty_logo.PNG" alt="" style="width:18%;"></a></li>
-        <ul id="menu">
+        <div class="col-md-6">
+          <div> <img class="photo_deux" src="img/StockSnap_FXNCQS1ZDO.jpg""></div>
+            </div>
+            <div class=" col-md-6">
+            <div> <img class="photo_trois" src="./img/beauty-gce7bab334_1920.jpg"></div>
 
-          
-          <li><a href="savon.php">Savon</a></li>
-          <li><a href="">Gamme visage</a></li>
-          <li><a href="">Coffret</a></li>
-          <li><a href="login.php">Connexion</a></li>
-          <li><a href=""><i class="fa-sharp fa-solid fa-basket-shopping"></i></a></li>
-
-        </ul>
-      </div>
-    </nav>
+          </div>
+        </div>
 
 
-  </header>
+
+
+
+  </section>
+
+
+  <div class="container">
+
+
+    <h1 id="vente" style="padding-bottom: 20px;"> NOS SAVONS </h1>
+
+
+
+    <?php
+
+
+
+    //Nous allons afficher tous les produits ajouté :
+    //connexion à la base de données
+    $con = mysqli_connect("localhost", "root", "", "natural_skin");
+    $req3 = mysqli_query($con, "SELECT * FROM produit");
+
+    if (mysqli_num_rows($req3) == 0) {
+      //si la base de donnée ne contient aucun produit , alors affichons :
+      echo " Aucun produit trouvé";
+    } else {
+      while ($row = mysqli_fetch_assoc($req3)) {
+
+        echo '
+
+                      <div class="row">
+                            <div class="col-md-4">
+                              <div class="card" style="margin-bottom:10%;">
+                                <img src="./admin/img/' . $row['image'] . '"  >
+                                
+                          
+                        <div class="card-body">
+
+                        <h5 class="card-title">' . $row['titre'] . '</h5>
+
+                        <p class="card-text"> ' . $row['description'] . '</p>
+                        <p class="card-text"> ' . $row['price'] . ' €</p>
+                        
+                        <a href="./panier/savon_detail.php" class="btn btn--info col-12">Voir Produit</a>
+                           
+                        </div>
+                          </div> 
+                            </div>
+                            
+            ';
+      }
+
+      // header('location: http://localhost/ecommerceFinal/savon.php');
+    }
+
+
+    ?>
+
+</div>
+
+ 
+ 
+
 
 
   
-    <section id="savon">
-
-      <div class="savon">
-        <div class="row" style="padding-bottom:50px;">
 
 
 
-          <div class="col-md-6">
-            <div> <img class="photo_deux" src="img/StockSnap_FXNCQS1ZDO.jpg""></div>
-        </div>
-        <div class=" col-md-6">
-              <div> <img class="photo_trois" src="img/beauty-gce7bab334_1920.jpg"></div>
 
+
+
+
+
+
+
+
+
+
+
+  <footer id="footer" class="footer-1">
+    <div class="main-footer widgets-dark typo-light">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget subscribe no-box">
+              <h5 class="widget-title">COMPANY NAME<span></span></h5>
+              <p>About the company, little discription will goes here.. </p>
             </div>
           </div>
 
-
-
-
-
-
-    </section>
-
-
-    <div class="container">
-      <h1 id="vente" style="padding-bottom: 20px;"> NOS SAVONS </h1>
-
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card" style="margin-bottom:10%;">
-            <img src="img/savon_curcum.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Savon Coco Lait De Chèvre</h5>
-              <p class="card-text"> La noix de coco permet l'hydratation profonde de la peau combinée avec le lait de chèvre qui est connu pour ses vertue anti-acnés tu as le combo parfait</p>
-              <a href="savon_detail.php" class="btn btn--info">Voir Produit</a>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title">Quick Links<span></span></h5>
+              <ul class="thumbnail-widget">
+                <li>
+                  <div class="thumb-content"><a href="#.">Get Started</a></div>
+                </li>
+                <li>
+                  <div class="thumb-content"><a href="#.">Top Leaders</a></div>
+                </li>
+                <li>
+                  <div class="thumb-content"><a href="#.">Success Stories</a></div>
+                </li>
+                <li>
+                  <div class="thumb-content"><a href="#.">Event/Tickets</a></div>
+                </li>
+                <li>
+                  <div class="thumb-content"><a href="#.">News</a></div>
+                </li>
+                <li>
+                  <div class="thumb-content"><a href="#.">Lifestyle</a></div>
+                </li>
+                <li>
+                  <div class="thumb-content"><a href="#.">About</a></div>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
 
-
-
-        <div class="col-md-4">
-          <div class="card" style="margin-bottom:10%">
-            <img src="img/savon_curcum.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Savon Coco Lait De Chèvre</h5>
-              <p class="card-text">La noix de coco permet l'hydratation profonde de la peau combinée avec le lait de chèvre qui est connu pour ses vertue anti-acnés tu as le combo parfait</p>
-              <a href="savon_detail.php" class="btn btn--info">Voir Produit</a>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="widget no-box">
+              <h5 class="widget-title">Get Started<span></span></h5>
+              <p>Get access to your full Training and Marketing Suite.</p>
+              <a class="btn" href="https://bit.ly/3m9avif" target="_blank">Subscribe Now</a>
             </div>
           </div>
-        </div>
 
+          <div class="col-xs-12 col-sm-6 col-md-3">
 
-        <div class="col-md-4">
-          <div class="card" style="margin-bottom:10%">
-            <img src="img/savon_curcum.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Savon Coco Lait De Chèvre</h5>
-              <p class="card-text">La noix de coco permet l'hydratation profonde de la peau combinée avec le lait de chèvre qui est connu pour ses vertue anti-acnés tu as le combo parfait</p>
-              <a href="savon_detail.php" class="btn btn--info">Voir Produit</a>
+            <div class="widget no-box">
+              <h5 class="widget-title">Contact Us<span></span></h5>
+
+              <p><a href="mailto:info@domain.com" title="glorythemes">info@domain.com</a></p>
+   
             </div>
           </div>
+
         </div>
-
-        <div class="col-md-4">
-          <div class="card" style="margin-bottom:10%">
-            <img src="img/savon_curcum.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Savon Coco Lait De Chèvre</h5>
-              <p class="card-text">La noix de coco permet l'hydratation profonde de la peau combinée avec le lait de chèvre qui est connu pour ses vertue anti-acnés tu as le combo parfait</p>
-              <a href="savon_detail.php" class="btn btn--info">Voir Produit</a>
-            </div>
-          </div>
-        </div>
-
-
       </div>
-
-    
     </div>
-    </div>
-  </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Shaymae</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        Designed by <a href="file:///C:/Users/EDW/index.html">Shaymae Ourahou</a>
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>Copyright Company Name © 2022. All rights reserved.</p>
+          </div>
+        </div>
       </div>
     </div>
   </footer>
