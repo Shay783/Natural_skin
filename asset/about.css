@@ -1,0 +1,59 @@
+h1{
+    padding-top: 50px;
+    text-align: center;
+    color: #EAAECF;
+    font-size: 40px;
+
+}
+
+h2{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    color: #EAAECF;
+    font-size: 40px;
+
+}
+
+.choisir p{
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: left;
+    font-size: 18px;
+}
+
+p{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10%;
+    font-size: 18px;
+}
+
+.icons{
+
+
+    padding-top: 12%;
+    padding-bottom: 10%;
+    justify-content: space-around;
+
+}
+
+.icons i{
+    text-align: center;
+}
+.icons {
+    text-align: center;
+}
+
+.choisir{
+    padding-bottom: 10%;
+}
+
+.connais p{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20%;
+    font-size: 18px;
+   color: #c56b88;;
+}

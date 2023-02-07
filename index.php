@@ -20,7 +20,7 @@
 <body>
   <section id="bg">
 
-
+ <div class="row colmd-6">
     <div class="class=" container d-flex flex-column align-items-center" data-aos="zoom-in" data-aos-delay="100"">
               <h1 class=" titre">Natural Skin</h1>
       <h4>Tombez amoureuse de votre peau avec Natural Skin. Une marque <br> 100% naturel qui prendra soin de votre peau. Composez votre <br> Routine soin avec nous, une routine conçu pour vous, par vous, <br> qui vous ressemble.</h4>
@@ -34,6 +34,8 @@
       <div class="copyright">
         &copy; Copyright <strong><span>Shaymae</span></strong>. All Rights Reserved
       </div>
+    
+    </div>
       <div class="credits">
 
         Designed by <a href="file:///C:/Users/shaym/Downloads/Kelly/Kelly/index.html">Shaymae Ourahou</a>

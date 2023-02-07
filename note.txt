@@ -242,3 +242,77 @@ image saon detail : <?= $row['img'] ?>
             TRUC AJOUT PANIER
 
 $req2 = mysqli_query($con, "INSERT INTO produit VALUE (titre, description, bienfait_un, bienfait_deux, bienfait_trois, bienfait_quatre, conseil, image, price) VALUES ('$titre','$description','$bienfait_un', '$bienfait_deux', '$bienfait_trois', '$bienfait_quatre', '$conseil','$nouveau_nom_img','$price' )");
+
+------------------------------------------------------------- PANIER ----------------------------------------------------------------------------------------------
+
+       <button style=" margin-top:10px;  background-color:pink; border-color:pink;" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Panier <span><?= array_sum($_SESSION['produit']) ?></span></button>
+
+
+                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                         <div class="offcanvas-header"> PANIER
+                             <li style="margin: 20px; width: fit-content; position: relative; text-decoration: 0;  color: #fff;"></li>
+                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                         </div>
+                         <div class="offcanvas-body">
+
+                             <!-- LA OU JE DEVRAI METTRE MON PHP DU PANIER -->
+                             <?php
+                                $total = 0;
+                                // Liste des produits
+                                // recuperer les dlés du tavleau session
+
+                                $ids = array_keys($_SESSION['produit']);
+                                // s'il n'y a aucune clé dans le tableau
+                                if (empty($ids)) {
+                                    echo "Votre panier est vide";
+                                } else {
+                                    // si oui
+                                    $products = mysqli_query($con, "SELECT * FROM produit WHERE id IN (" . implode(',', $ids) . ")");
+
+                                    //Liste des produits avec une boucle foreach
+                                    foreach ($products as $product) :
+                                        // Calculer le total (prix initaire * quantité) et addictionné chaque résultat a chaque tour de boule
+
+                                        $total = $total + $product['price'] * $_SESSION['produit'][$product['id']];
+                                ?>
+                                     <div class="card mb-3" style="max-width: 540px; border-color:white;">
+                                         <div class="row g-0">
+                                             <div class="col-md-4">
+                                                 <img src="./admin/img/<?= $product['image'] ?>" class="img-fluid rounded-start">
+                                             </div>
+
+                                             <div class="col-md-8">
+                                                 <div class="card-body">
+                                                     <h5 class="card-title"><?= $product['titre'] ?></h5>
+                                                     <p class="card-text"></p>
+                                                     <p><?= $product['price'] ?> €</p>
+                                                     <p class="card-title">Quantité : <?= $_SESSION['produit'][$product['id']] ?> </p>
+                                                     <a style="color: #e95593;" href="panier.php?del=<?= $product['id'] ?>"> Retirer le produit</a>
+
+                                                 </div>
+                                             </div>
+                                         </div>
+                                     </div>
+
+                             <?php endforeach;
+                                } ?>
+
+
+                             <h4>TOTAL : <?= $total ?> €</h4>
+
+                         </div>
+                     </div>
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<?php
+                    if (isset($_SESSION['email'])){
+                    ?>
+                     <li><a href="deconnexion.php" >Deconnexion</a></li>
+                 <?php
+                    }else{
+                    ?>
+                     <li><a href="login.php">Connexion</a></li>
+                 <?php
+                    }
+                    ?>

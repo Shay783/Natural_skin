@@ -13,7 +13,6 @@ if (!$_SESSION['password']) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natural Skin</title>
-    <link rel="stylesheet" href="assets/table.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,29 +21,19 @@ if (!$_SESSION['password']) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
 
-<body style="background-color:#f7d9eb;">
+<body style="background-color:#FBF1F7;">
 
 
-    <h2 style="padding-top:50px;">Liste Admin</h2>
+    <h2 style=" color: #EAAECF; padding-top:50px; padding-bottom:50px; text-align:center;">Liste Admin</h2>
 
-    <table class="container">
+    <table class="table table-striped container">
         <thead>
             <tr>
-                <th>
-                    <h1>Id</h1>
-                </th>
-                <th>
-                    <h1>Nom</h1>
-                </th>
-                <th>
-                    <h1>Prénom</h1>
-                </th>
-                <th>
-                    <h1>Email</h1>
-                </th>
-                <th>
-                    <h1>Action</h1>
-                </th>
+                <th style="color: #d3819b;" scope="col">id</th>
+                <th style="color: #d3819b;" scope="col">Nom</th>
+                <th style="color: #d3819b;" scope="col">Prenom</th>
+                <th style="color: #d3819b;" scope="col">Email</th>
+                <th style="color: #d3819b;" scope="col">Action</th>
             </tr>
         </thead>
         <?php
@@ -54,13 +43,13 @@ if (!$_SESSION['password']) {
 
             <tbody>
                 <tr>
-                    <td> <?= $user['id']  ?></td>
-                    <td><?= $user['prenom'] ?></td>
-                    <td> <?= $user['nom']  ?></td>
-                    <td><?= $user['email'] ?></td>
+                    <td style="color: #EAAECF;"> <?= $user['id']  ?></td>
+                    <td style="color: #EAAECF;"><?= $user['prenom'] ?></td>
+                    <td style="color: #EAAECF;"> <?= $user['nom']  ?></td>
+                    <td style="color: #EAAECF;"><?= $user['email'] ?></td>
                     <td>
-                        <a href="bannir.php?id=<?= $user['id']; ?>  "><i class=" fa-solid fa-trash-can"></i></a>
-                        <a href=""><i class="fa-solid fa-pen"></i></a>
+                        <a href="bannir.php?id=<?= $user['id']; ?>  "><i style="padding-right:10px; color: #ff5188;" class=" fa-solid fa-trash-can"></i></a>
+                        <a href="modifier.php?id=<?= $user['id']; ?>"><i style="color: #ff5188;" class="fa-solid fa-pen"></i></a>
                     </td>
                 </tr>
             <?php
@@ -92,5 +81,6 @@ if (!$_SESSION['password']) {
 
 
 </body>
+
 
 </html>

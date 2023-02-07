@@ -1,27 +1,17 @@
 body{
     margin: 0 auto; 
+ 
 }
  /*****************************************************   index + Header **********************************************************/
 
 
-.surligner::-moz-selection::-moz-selection {
-   color: #fff;
-   background-color: #bf4272;
-}
-      
-.surligner::selection {
-  color: #fff;
-  background-color: #bf4272;
 
-}
 
 .ligne{
     background-color: #faa8d7;
     text-align: center;
     color: white;
     padding-top: 0.1px;
-    font-family: 'Catamaran', sans-serif;
-    font-family: 'Jura', sans-serif;
     font-size: 15px;
     font-weight: 500;
     font-weight: bold;
@@ -29,38 +19,19 @@ body{
     text-transform: uppercase;
     color: #ffffff;
 }
-ul>li>a{
-    text-decoration: none;
-    color: black;
-    text-align: center;
-    list-style-type:none;
-    font-size: 22px;
-    font-family: 'Catamaran', sans-serif;
-   font-family: 'Jura', sans-serif;
+
+nav .navbar{
+  font-family: 'Aboreto', cursive;
+
+}
+#menu{
+  display: flex;
 }
 
-ul>li>a:hover{
-  color: #bf4272;
-}
 
-nav{
-    text-align: center;
-    justify-content: space-between;
-    background-color: white;
-}
 
-nav ul{
-    list-style-type:none;
-    font-size: 16px;
-    
-}
 
-nav li {
-    display: inline;
-    list-style-type:none;
-    padding: 10px 0 10px 30px;
-    font-family: 'Jura', sans-serif;
-}
+
 
 
 
@@ -161,16 +132,6 @@ text-decoration: none;
   color: white;
 }
 
-ul>li>a>i{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    list-style-type:none;
-    font-size: 22px;
-    font-family: 'Catamaran', sans-serif;
-   font-family: 'Jura', sans-serif;
-}
-
-
 .dropdown{
   display: flex;
 }
@@ -178,11 +139,6 @@ ul>li>a>i{
 /* *** effect */
 
 
-
-
-/* .vente{
-  background-color: #ffdef1;
-} */
 
  /*****************************************************   Fin Page Savon **********************************************************/
 
@@ -203,4 +159,3 @@ form{
   background-color:rgb(255, 255, 255);
   margin-bottom: 40%;
 }
-

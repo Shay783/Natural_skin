@@ -17,6 +17,7 @@
     padding: 10px 25px;
     border-radius: 6px;
     font-size: 14px;
+    
 }
 span {
     background-color: #ff4f83;
@@ -30,7 +31,7 @@ span {
     color: #fff;
     position: absolute;
     top: -0.4px;
-    left: 55px;
+    left: 35px;
 }
 
 .panier {
@@ -57,3 +58,4 @@ span {
     color: #37a6ff;
     padding: 10px;
 }
+

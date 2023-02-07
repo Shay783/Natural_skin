@@ -24,22 +24,22 @@
 
     //requete afficher les infos
 
-    $req = mysqli_query($con, "SELECT * FROM users WHERE id = '$id' ");
+    $req = mysqli_query($con, "SELECT * FROM membre_admin WHERE id = '$id' ");
     $row = mysqli_fetch_assoc($req);
 
     if (isset($_POST['envoi'])) {
         //extraction des informations envoyé dans des variables par la methode POST
         extract($_POST);
         //verfier que tous les champs ont été rempli
-        if (isset($lastname) && isset($name) && isset($pseudo) && isset($email)) {
+        if (isset($prenom) && isset($nom) && isset($email)) {
 
             //requête de modification
-            $req = mysqli_query($con, "UPDATE users SET lastname = '$lastname' , name = '$name' , pseudo = '$pseudo' , email = '$email' WHERE id = '$id'");
-            header("location: client.php");
+            $req = mysqli_query($con, "UPDATE membre_admin SET prenom = '$prenom' , nom = '$nom' , email = '$email' WHERE id = $id");
+            header("location: membre.php");
             if ($req) { //si la requête a été effectuée avec succès , on fait une redirection
 
                 if ($req) { //si la requete a été effectués avec succées, on fait une redirection
-                    header("location: client.php");
+                    header("location: membre.php");
                 } else {
                     $message = "employé non modifier";
                 }
@@ -48,7 +48,7 @@
     }
     ?>
 
-    <h2 style=" color: #EAAECF; padding-top:50px; text-align:center;">Liste Admin</h2>
+    <h2 style=" color: #EAAECF; padding-top:50px; text-align:center;">Modifier l'admin</h2>
     <p class="erreur_message">
 
     </p>
@@ -56,22 +56,24 @@
     <section class=" input_add">
         <form method="POST" action="" enctype="multipart/form-data">
 
+            <label>Prenom</label>
+            <input type="text" name="prenom" value="<?= $row['prenom']  ?>">
+
+
 
             <label>Nom</label>
-            <input type="text" name="lastname" value="<?= $row['lastname']  ?>">
+            <input type="text" name="nom" value="<?= $row['nom']  ?>">
 
 
-            <label>Prénom</label>
-            <input type="text" name="name" value="<?= $row['name']  ?>">
 
 
             <label>Email</label>
             <input type="email" name="email" value="<?= $row['email']  ?>">
 
 
-            <input type="submit" value="Modifier le client" class="btn-liste-prod" name="envoi">
+            <input type="submit" value="Modifier l'admin" class="btn-liste-prod" name="envoi">
         </form>
-    </section>
+
 </body>
 
 </html>

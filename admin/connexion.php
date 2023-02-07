@@ -38,7 +38,7 @@ if (isset($_POST['envoi'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natural Skin</title>
-    <link rel="stylesheet" href="assets/admin.css">
+    <link rel="stylesheet" href="assets/ajout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,21 +47,22 @@ if (isset($_POST['envoi'])) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
 
-<body style="background-color: #2e1e26">
+<body style="background-color:#f7d9eb;">
+
+    <h2 style=" color: #EAAECF; padding-top:50px; text-align:center;">Connexion</h2>
+    <section class=" input_add">
+        <form method="POST" action="" enctype="multipart/form-data">
+
+            <label>Nom</label>
+            <input type="text" name="prenom">
 
 
-    <form method="POST" action="" class="form_connect row col-4" style="margin-left:35%; margin-top:10%; margin-bottom:50px; ">
-        <div class="mb-3">
-            <label for="exampleInputprenom1" class="form-label">Prénom</label>
-            <input type="text" class="form-control" id="exampleInputprenom1" aria-describedby="prenomHelp" name="prenom">
+            <label>Mot de passe</label>
+            <input type="password" name="password">
 
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Mot de passe</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
-        </div>
-        <button type="submit" class="btn btn-primary" name="envoi" style="width:20%; margin-left:35%;">Connexion</button>
-    </form>
+            <input type="submit" value="Connexion" class="btn-liste-prod" name="envoi">
+        </form>
+    </section>
 
 
 

@@ -23,6 +23,7 @@ if (isset($_POST['envoi'])) {
     $password = $_POST['password'];
     if ($email && $password) {
         $connect = mysqli_connect('localhost', 'root', '');
+        
     } else {
         echo '<div class="alert alert-danger" align="center" style=" text-align: center;">
             <strong> Erreur </strong> Veuillez saisir tous les champs

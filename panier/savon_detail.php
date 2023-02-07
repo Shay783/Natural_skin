@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../asset/detail.css">
+  <link rel="stylesheet" href="../asset/footer.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -17,7 +18,7 @@
 <body style="background-color:rgb(255, 242, 248);">
 
   <?php
-  include '../nav.php'
+  include '../includes/nav_copy.php'
   ?>
 
   <div>
@@ -32,11 +33,11 @@
       while ($row = mysqli_fetch_assoc($req)) {
 
       ?>
-        <div class="image col-6 ">
+        <div class="image col-sm-6 mb-3 mb-sm-0 ">
           <img src="../admin/img/<?= $row['image'] ?>" style="width:90%; margin-top:50px; margin-bottom:50px;" alt="">
         </div>
 
-        <div class="text col-6">
+        <div class="text col-sm-6 mb-3 mb-sm-0">
           <h1 style="margin-top:70px;"><?= $row['titre'] ?></h1>
           <h2 style="margin-top:40px;"><?= $row['price'] ?> €</h2>
 
@@ -63,7 +64,9 @@
   <?php } ?>
   </div>
 
-
+  <?php
+  include '../includes/footer.php'
+  ?>
 </body>
 
 </html>

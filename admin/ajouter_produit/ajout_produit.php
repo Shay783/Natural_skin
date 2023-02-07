@@ -88,7 +88,7 @@ if (isset($_POST['btn-ajouter'])) {
                 }
                 ?>
             </div>
-
+            
             <label>Nom du produit</label>
             <input type="text" name="titre">
             <label>Description du produit</label>
