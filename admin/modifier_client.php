@@ -31,10 +31,10 @@
         //extraction des informations envoyé dans des variables par la methode POST
         extract($_POST);
         //verfier que tous les champs ont été rempli
-        if (isset($lastname) && isset($name) && isset($pseudo) && isset($email)) {
+        if (isset($lastname) && isset($name) && isset($email)) {
 
             //requête de modification
-            $req = mysqli_query($con, "UPDATE users SET lastname = '$lastname' , name = '$name' , pseudo = '$pseudo' , email = '$email' WHERE id = '$id'");
+            $req = mysqli_query($con, "UPDATE users SET lastname = '$lastname' , name = '$name' , email = '$email' WHERE id = $id");
             header("location: client.php");
             if ($req) { //si la requête a été effectuée avec succès , on fait une redirection
 

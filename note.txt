@@ -316,3 +316,26 @@ $req2 = mysqli_query($con, "INSERT INTO produit VALUE (titre, description, bienf
                  <?php
                     }
                     ?>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Nous sommes fiers de proposer une gamme de produits de soins de la peau naturels et efficaces, conçus pour répondre aux besoins de tous les types de peau.
+
+Nous comprenons que chaque peau est unique et nous avons donc conçu notre gamme pour répondre à un large éventail de besoins de soins de la peau. Que vous cherchiez à hydrater votre peau sèche, à minimiser les rides et les ridules, à calmer les irritations ou simplement à donner à votre peau un éclat sain, nous avons le produit qu'il vous faut.
+
+Nous croyons en la transparence en matière de composition et c'est pourquoi nous listons clairement tous les ingrédients de chaque produit sur notre site. Nous sommes également toujours là pour répondre à toutes vos questions et pour vous aider à trouver le produit idéal pour votre peau.
+
+N'attendez plus pour découvrir les bienfaits de la peau naturelle. Parcourez notre gamme de produits aujourd'hui et découvrez comment une peau saine et radieuse peut être à portée de main.
+
+N'attendez plus pour découvrir les bienfaits de la peau naturelle. Parcourez notre gamme de produits aujourd'hui et découvrez comment une peau saine et radieuse peut être à portée de main.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ Nous croyons en la transparence en matière de composition et c'est pourquoi nous listons clairement tous les ingrédients de chaque produit sur notre site. Nous sommes également toujours là pour répondre à toutes vos questions et pour vous aider à trouver le produit idéal pour votre peau. <br><br>
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+BUG : Modifier produit et client
+Deconnexion : lorsque je me deconnecte tous s'en va
+Voir produit : Regarder par rapport a l'id...
+

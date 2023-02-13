@@ -46,7 +46,7 @@
 
             </div>
 
-            <div style=" padding-left: 40px; padding-top: 50px; padding-bottom:80px; background-color:#FBF1F7;"  class=" question col-sm-6 mb-3 mb-sm-0">
+            <div style=" padding-left: 40px; padding-top: 50px; padding-bottom:80px; background-color:#FBF1F7;" class=" question col-sm-6 mb-3 mb-sm-0">
               <h1 style=" margin-bottom:40px; color:#EAAECF; ">Natural skin</h1>
               <p>Nos savons à froid NATURAL SKIN vous offriront un véritable soin lavant, <br> hydratant et protecteur de votre peau.
                 Le choix de nos huiles et beurres non raffinés <br> extraites à froid pendant 6 semaines, aux propriétés préservées, <br> est un atout incomparable dans nos savons <br> <br> Le savon naturel ne desséchera pas votre peau et ne provoquera aucune irritation de la peau. <br> Elle vous offrira un véritable soin lavant hydratant et protecteur de votre peau</p>
@@ -54,15 +54,13 @@
 
             <div style=" padding-left: 20px; padding-top: 50px; padding-bottom:80px; background-color:#FBF1F7;  " class=" question col-sm-6 mb-3 mb-sm-0">
               <h1 style=" margin-bottom:40px; color:#EAAECF; ">Le saviez vous ?</h1>
-              <p>Saviez-vous que choisir un savon personnalisé c'est la moitié de l'efficacité de votre routine beauté ?  <br> <br> Le savon naturel  ne contient pas d’ingrédients synthétiques qui peuvent être absorbés par la peau et provoquer<br>  des problèmes  Le savon naturel peut convenir aux différents types de peaux, et adapté à tout le monde en fonction des ingrédients et parfum choisi. </p>
+              <p>Saviez-vous que choisir un savon personnalisé c'est la moitié de l'efficacité de votre routine beauté ? <br> <br> Le savon naturel ne contient pas d’ingrédients synthétiques qui peuvent être absorbés par la peau et provoquer<br> des problèmes Le savon naturel peut convenir aux différents types de peaux, et adapté à tout le monde en fonction des ingrédients et parfum choisi. </p>
             </div>
 
             <hr style="color: #ff4f83; width:50%; margin-left:25%;">
 
 
           </div>
-
-
 
 
     </section>
@@ -88,34 +86,35 @@
           //si la base de donnée ne contient aucun produit , alors affichons :
           echo " Aucun produit trouvé";
         } else {
-          while ($row = mysqli_fetch_assoc($req3)) {
-
-            echo '
-
-                      
-                            <div class="col-sm-4 mb-3 mb-sm-0">
-                              <div class="card" style="margin-bottom:10%;  border:none; width:90%;">
-                                <img src="./admin/img/' . $row['image'] . '"  >
-                                
-                          
-                        <div class="card-body">
-
-                        <h5 class="card-title">' . $row['titre'] . '</h5>
-                        <p class="card-text"> ' . $row['description'] . '</p>
-                        <p class="card-text"> ' . $row['price'] . ' €</p>
-                        
-                        <a href="./panier/savon_detail.php" class="btn btn--info col-12">Voir Produit</a>
-                           
-                        </div>
-                          </div> 
-                            </div>
-                           
+          while ($row = mysqli_fetch_assoc($req3)) { ?>
 
 
 
-                            
-                            
-            ';
+
+            <div class="col-sm-4 mb-3 mb-sm-0">
+              <div class="card" style="margin-bottom:10%;  border:none; width:90%;">
+                <img src="./admin/img/<?php echo $row['image'] ?>">
+
+
+                <div class="card-body">
+
+                  <h5 class="card-title"><?php echo $row['titre'] ?></h5>
+                  <p class="card-text"> <?php echo $row['description'] ?></p>
+                  <p class="card-text"> <?php echo  $row['price'] ?>€</p>
+
+                  <a class=" btn btn--info col-12" href="savon_detail.php?titre=<?php echo $row['titre'] ?>&description=<?php echo $row['description'] ?>&bienfait_un<?php echo $row['bienfait_un'] ?>&bienfait_deux<?php echo $row['bienfait_deux'] ?>&bienfait_trois<?php echo $row['bienfait_trois'] ?>&bienfait_quatre<?php echo $row['bienfait_quatre'] ?>&conseil<?php echo $row['conseil'] ?>&price<?php echo $row['price'] ?>&image<?php echo $row['image'] ?>"> Voir Produit</a>
+                  
+
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+        <?php
           }
         }
 

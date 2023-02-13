@@ -89,7 +89,7 @@ body {
     border-radius: 6px;
     font-size: 14px;
 }
-span {
+/* span {
     position: absolute;
     top: -9px;
     right: -9px;
@@ -101,7 +101,7 @@ span {
     justify-content: center;
     border-radius: 50%;
     font-size: 12px;
-    color: #fff;
+    color: #fff; */
 }
 .products_list {
     margin: 100px auto;

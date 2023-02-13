@@ -48,6 +48,10 @@ if (isset($_POST['envoi'])) {
 
 <body style="background-color:#f7d9eb;">
 
+    <head>
+        <a href="index.php"><img style="text-align:center;" src="../img/logo_admin.PNG" alt="" width=200></a>
+    </head>
+
     <h2 style=" color: #EAAECF; padding-top:50px; text-align:center;">Ajouter un admin</h2>
     <section class=" input_add">
         <form method="POST" action="" enctype="multipart/form-data">

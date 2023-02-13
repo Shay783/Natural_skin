@@ -39,6 +39,5 @@ if(!isset($_SESSION['produit'])){
 
             
     }
-    header("location:savon_detail.php");
+    header("location:../savon_detail.php");
 }
-

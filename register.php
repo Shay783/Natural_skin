@@ -8,6 +8,12 @@ if (isset($_POST['envoi'])) {
         $name = htmlspecialchars($_POST['name']);
         $email = htmlspecialchars($_POST['email']);
         $password = sha1($_POST['password']);
+        $passwordLength = strlen($_POST['password']);
+        if ($passwordLength < 8) {
+            echo '<div class="alert alert-danger" align="center" style=" text-align: center;">
+                <strong> Erreur </strong> Le mot de passe doit comporter au moins 8 caractères
+              </div>';
+        }else {
         $insertUser = $bdd->prepare('INSERT INTO users(lastname, name, email, password)VALUES(?, ?, ?, ?)');
         $insertUser->execute(array($lastname, $name, $email, $password));
         $recupUser = $bdd->prepare('SELECT * FROM users WHERE lastname = ? AND name = ? AND email = ? AND password = ? ');
@@ -21,11 +27,12 @@ if (isset($_POST['envoi'])) {
             header('Location: login.php');
         }
         echo "Vous etes bien inscrit veuillez vous connecter";
-    } else {
+    } 
+}else{
         echo '<div class="alert alert-danger" align="center" style=" text-align: center;">
-            <strong> Erreur </strong> Veuillez saisir tous les champs
-          </div>';
-    }
+                <strong> Erreur </strong> Veuillez saisir tous les champs
+              </div>';
+}
 }
 ?>
 <!DOCTYPE html>

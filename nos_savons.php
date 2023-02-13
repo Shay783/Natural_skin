@@ -37,20 +37,21 @@
                 <div class="row" style="padding-bottom:50px;">
 
 
-                        <div style=" padding-left: 40px; padding-top: 50px; padding-bottom:80px; background-color:#FBF1F7;" class=" question col-sm-8 mb-3 mb-sm-0">
-                            <h1 style=" margin-bottom:40px; color:#EAAECF; ">Recette Unique </h1>
-                            <p>Nos savons à froid NATURAL SKIN vous offriront un véritable soin lavant, <br> hydratant et protecteur de votre peau.
-                                Le choix de nos huiles et beurres non raffinés <br> extraites à froid pendant 6 semaines, aux propriétés préservées, <br> est un atout incomparable dans nos savons <br> <br> Le savon naturel ne desséchera pas votre peau et ne provoquera aucune irritation de la peau. <br> Elle vous offrira un véritable soin lavant hydratant et protecteur de votre peau</p>
-                        </div>
+                  
 
-                        <div style=" background-color:#FBF1F7; " class=" question col-sm-4 mb-3 mb-sm-0">
-                            <img src="img/new_creme-removebg-preview (1).png" alt="" width=200>
-                        </div>
-
-                        <hr style="color: #ff4f83; width:50%; margin-left:25%;">
-
-
+                    <div style=" background-color:#FBF1F7; " class=" question col-sm-6 mb-3 mb-sm-0">
+                        <img src="img/photo_coté-removebg-preview.png" alt="" width=90%>
                     </div>
+  <div style=" padding-left: 40px; padding-top: 50px; padding-bottom:80px; background-color:#FBF1F7;" class=" question col-sm-6 mb-3 mb-sm-0">
+                        <h1 style=" margin-bottom:40px; color:#EAAECF; ">Recette Unique </h1>
+                        <p> Nous comprenons que chaque peau est unique et nous avons donc conçu notre gamme pour répondre à un large éventail de besoins de soins de la peau. Que vous cherchiez à hydrater votre peau sèche, à minimiser les rides et les ridules, à calmer les irritations ou simplement à donner à votre peau un éclat sain, nous avons le produit qu'il vous faut. <br> <br>
+
+                            N'attendez plus pour découvrir les bienfaits de la peau naturelle. Parcourez notre gamme de produits aujourd'hui et découvrez comment une peau saine et radieuse peut être à portée de main. <br> <br></p>
+                    </div>
+                    <hr style="color: #ff4f83; width:50%; margin-left:25%;">
+
+
+                </div>
 
 
 

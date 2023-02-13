@@ -21,7 +21,11 @@ if (!$_SESSION['password']) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </head>
 
-<body style="background-color:#FBF1F7;">
+<body style="background-color:#F7D9EB;">
+
+    <head>
+        <a href="index.php"><img style="text-align:center;" src="../img/logo_admin.PNG" alt="" width=200></a>
+    </head>
 
 
     <h2 style=" color: #EAAECF; padding-top:50px; padding-bottom:50px; text-align:center;">Liste Admin</h2>

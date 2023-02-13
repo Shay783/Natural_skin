@@ -22,35 +22,35 @@
 
     <div class="container">
         <h1 style="color:#EAAECF;">A Propos</h1>
-        <h5 style=" text-align: left;
+        <p style=" text-align: left;
     padding-top: 20px; ">
-            Notre engagement écologique est au cœur de tout ce que nous faisons chez Natural Skin. Nous croyons que nous pouvons aider à protéger l'environnement tout en offrant des soins de la peau de qualité supérieure. Nous avons pris les mesures suivantes pour minimiser notre impact sur l'environnement: <br>
+            Notre engagement écologique est au cœur de tout ce que nous faisons chez Natural Skin. Nous croyons que nous pouvons aider à protéger l'environnement tout en offrant des soins de la peau de qualité supérieure. Nous avons pris les mesures suivantes pour minimiser notre impact sur l'environnement: <br> <br>
 
-            Utilisation d'ingrédients durables: Nous n'utilisons que des ingrédients biologiques et durables dans nos produits pour minimiser notre impact sur l'environnement. <br>
+            Utilisation d'ingrédients durables: Nous n'utilisons que des ingrédients biologiques et durables dans nos produits pour minimiser notre impact sur l'environnement. <br> <br>
 
-            Emballage écologique: Nous utilisons des emballages respectueux de l'environnement pour minimiser les déchets. <br>
+            Emballage écologique: Nous utilisons des emballages respectueux de l'environnement pour minimiser les déchets. <br> <br>
 
-            Pratiques commerciales éthiques: Nous pratiquons des pratiques commerciales éthiques pour minimiser notre impact sur l'environnement et soutenir les communautés locales. <br>
+            Pratiques commerciales éthiques: Nous pratiquons des pratiques commerciales éthiques pour minimiser notre impact sur l'environnement et soutenir les communautés locales. <br> <br>
 
             Nous sommes déterminés à continuer de trouver de nouvelles façons de minimiser notre impact sur l'environnement tout en offrant des soins de la peau de qualité supérieure.
-        </h5>
+        </p>
 
 
 
 
         <div class="icons row">
             <div class="icon_planet col-md-4">
-                <i class="fa-solid fa-earth-americas "></i>
+                <i class="fa-solid fa-earth-americas" style="font-size:6vh; color:#aed2ea;"></i>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, sapiente?</p>
             </div>
 
             <div class="icon_feuille col-md-4">
-                <i class="fa-solid fa-leaf"></i>
+                <i class="fa-solid fa-leaf" style="font-size:6vh; color:#aed2ea;"></i>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, sapiente?</>
             </div>
 
             <div class="icon_tirrelir col-md-4">
-                <i class="fa-solid fa-handshake"></i>
+                <i class="fa-solid fa-handshake" style="font-size:6vh; color:#aed2ea;"></i>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, sapiente?</>
             </div>
 

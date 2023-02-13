@@ -25,12 +25,16 @@ if (!$_SESSION['password']) {
 
 
 <body style="background-color:#f7d9eb;">
+
+<head>
+    <a href="index.php"><img style="text-align:center;" src="../img/logo_admin.PNG" alt="" width=200></a>
+</head>
     <section class=" input_add">
         <form action="" method="POST" enctype="multipart/form-data">
 
             <a class="btn-liste-prod" href="membre.php">Liste des membres</a>
             <a class="btn-liste-prod" href="client.php"> Liste des clients</a>
-            <a class="btn-liste-prod" href="ajout_membre.php"> Ajouter un memebre </a>
+            <a class="btn-liste-prod" href="ajout_membre.php"> Ajouter un membre </a>
             <a class="btn-liste-prod" href="ajout_clients.php"> Ajouter un client</a>
             <a class="btn-liste-prod" href="./ajouter_produit/ajout_produit.php">Ajouter un nouveau produit</a>
             <a class="btn-liste-prod" href="logout.php">deconnexion</a>

@@ -10,9 +10,7 @@ if (isset($_GET['id']) and !empty($_GET['id'])) {
         $bannirProduct->execute(array($getid));
         header('location: resultat.php');
     } else {
-        echo '<div class="alert alert-danger" align="center" style=" text-align: center;">
-            <strong> Erreur </strong> Aucun produit trouvé
-          </div>';
+        echo header('location: resultat.php');
     }
 } else {
     echo '<div class="alert alert-danger" align="center" style=" text-align: center;">

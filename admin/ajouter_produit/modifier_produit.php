@@ -62,7 +62,7 @@
 
 
             <label>Description</label>
-            <input type="text" name="description" value="<?= $row['description']  ?>">
+            <textarea cols="30" rows="5" type="text" name="description" value="<?= $row['description']  ?>"></textarea>
 
 
             <label>bienfait un</label>

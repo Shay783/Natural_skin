@@ -53,7 +53,7 @@
 
          <nav class="navbar navbar-expand-lg bg-body-tertiary ">
              <div class="container">
-                 <a class="navbar-brand" href="#">
+                 <a class="navbar-brand" href="savon.php">
                      <img src="./img/logo_natural_skin.png" alt="Logo" width="150" class="d-inline-block align-text-top">
                  </a>
                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,16 +68,17 @@
                              <a href="about.php" class="nav-link active" aria-current="page" href="about.php">A propos</a>
                          </li>
                          <li class="nav-item">
-                             <a href="nos_savons.php" class="nav-link active" aria-current="page" >Nos Savons</a>
+                             <a href="nos_savons.php" class="nav-link active" aria-current="page">Nos Savons</a>
                          </li>
                          <li class="nav-item">
-                             <a href="contact.php" class="nav-link active" aria-current="page" >Contact</a>
+                             <a href="contact.php" class="nav-link active" aria-current="page">Contact</a>
                          </li>
 
                          <?php
                             if (isset($_SESSION['email'])) {
                             ?>
                              <li class="nav-item"><a class="nav-link active" aria-current="page" href="deconnexion.php">Deconnexion</a></li>
+                             <li class="nav-item"><a class="nav-link active" aria-current="page" href="profile.php">Profil</a></li>
                          <?php
                             } else {
                             ?>
@@ -97,7 +98,7 @@
 
 
          </nav>
-         <button style=" margin-top:10px;  background-color:white; border-color:white;    position: absolute; top: 35px; left: 75%;" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i style="color:rgb(255, 168, 208);" class="fa-solid fa-cart-shopping"></i><span style="    background-color: #ff4f83; height: 20px; width: 20px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 12px; color: #fff; position: absolute; bottom: 23px; left: 30px;"><?= array_sum($_SESSION['produit']) ?></span></button>
+         <button style=" margin-top:10px;  background-color:white; border-color:white;    position: absolute; top: 35px; left: 65%;" class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i style="color:rgb(255, 168, 208);" class="fa-solid fa-cart-shopping"></i><span style="    background-color: #ff4f83; height: 20px; width: 20px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 12px; color: #fff; position: absolute; bottom: 23px; left: 30px;"><?= array_sum($_SESSION['produit']) ?></span></button>
 
 
          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
